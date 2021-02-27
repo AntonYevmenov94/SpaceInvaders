@@ -102,7 +102,7 @@ public class Menu : MonoBehaviour
     {
         StringBuilder builder = new StringBuilder();
         int n = 1;
-        foreach (var item in Records.OrderBy(p => p.Value))
+        foreach (var item in Records.OrderByDescending(p => p.Value))
         {
             builder.AppendLine($"{n++}. {item.Key}: {item.Value}");
         }
